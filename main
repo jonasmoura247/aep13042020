@@ -1,0 +1,19 @@
+package aula20200413.aep;
+
+public class App {
+	public static void main(String[] args) {
+		Skate profissional = new Skate();
+
+		profissional.setMarcaTruck("independente");
+		profissional.setMarcaRodas("Black Sheep");
+		profissional.setMarcaShape("Santa Cruz");
+		profissional.setTamanhoShape(8.3);
+		profissional.setTamanhoTruck(119);
+		
+		System.out.println(profissional);
+		
+		Skate iniciante = new Skate("crail", "mug", "woodlight", 8.5,122);
+		System.out.println(iniciante);
+	}
+
+}
