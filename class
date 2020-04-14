@@ -1,0 +1,84 @@
+package aula20200413.aep;
+
+public class Skate {
+	private String marcaTruck;
+	private String marcaRodas;
+	private String marcaShape;
+	private double tamanhoShape;
+	private int tamanhoTruck;
+
+	public String toString() {
+		return "Skate:" + "\nMarca Truck: " + getMarcaTruck() + " \nMarca Rodas: " + getMarcaRodas() + "\nMarca Shape: "
+				+ getMarcaShape() + "\ntamanho Shape: " + getTamanhoShape() + "\n";
+
+	}
+
+	// construtor padrão
+	public Skate() {
+		System.out.println("Criando um skate: ");
+		System.out.println("para escolher um truck ideal, o shape deve equivaler a 7% do tamnho do truck sendo: ");
+	}
+
+	// construtor Alternativo
+	public Skate(String marcaTruck, String marcaRodas, String marcaShape, double tamanhoShape, int tamanhoTruck) {
+		setMarcaTruck(marcaTruck);
+		setMarcaRodas(marcaRodas);
+		setMarcaShape(marcaShape);
+		setTamanhoShape(tamanhoShape);
+		setTamanhoTruck(tamanhoTruck);
+
+	}
+
+	public void setMarcaRodas(String marcaRodas) {
+		this.marcaRodas = marcaRodas;
+	}
+
+	public void setMarcaShape(String marcaShape) {
+		this.marcaShape = marcaShape;
+	}
+
+	public void setMarcaTruck(String marcaTruck) {
+		this.marcaTruck = marcaTruck;
+	}
+
+	public void setTamanhoShape(double tamanhoShape) {
+		this.tamanhoShape = tamanhoShape;
+	}
+
+	public void setTamanhoTruck(int tamanhoTruck) {
+		this.tamanhoTruck = tamanhoTruck;
+	}
+
+	public String getMarcaTruck() {
+		return marcaTruck;
+	}
+
+	public String getMarcaRodas() {
+		return marcaRodas;
+	}
+
+	public String getMarcaShape() {
+		return marcaShape;
+	}
+
+	public double getTamanhoShape() {
+		return tamanhoShape;
+	}
+
+	public int getTamanhoTruck() {
+		return tamanhoTruck;
+	}
+
+	public double calcularTamanhoTruck() {
+		System.out.println("para escolher um truck ideal, o shape deve equivaler a 7% do tamnho do truck sendo: ");
+		int tamanhoTruck = 119;
+		double percentual = 7.0;
+		double resultado = tamanhoTruck - (percentual * tamanhoTruck);
+		return resultado;
+	}
+
+	public void informarCalculoTamanhoTruck() {
+		this.tamanhoShape = this.calcularTamanhoTruck();
+	}
+
+}
